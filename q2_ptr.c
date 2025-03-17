@@ -1,19 +1,21 @@
 //Array Replacement I
 #include <stdio.h>
 
-int main(){
+int main() {
     int lista[10];
     int num;
 
-    for (int j = 0; j<10; j++){
-        if(num < 0 || num == 0){
+    for (int j = 0; j < 10; j++) {
+        scanf("%d", &num);
+        if (num <= 0) {
             num = 1;
         }
-        scanf("%d\n", &lista[num]);
+        lista[j] = num;
     }
 
-    for (int i = 0; i<10; i++){
-        printf("X[%d] = %d\n", i, num);
+    for (int j = 0; j < 10; j++) {
+        printf("X[%d] = %d\n", j, lista[j]);
     }
+
     return 0;
 }
