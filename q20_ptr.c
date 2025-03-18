@@ -1,21 +1,22 @@
-// Fibonacci Array
+// fibonacci array
 #include <stdio.h>
 
 int main(){
     int casos, numero;
+
     scanf("%d", &casos);
+
+    unsigned long long fibonacci[61];
+    fibonacci[0] = 0;
+    fibonacci[1] = 1;
+
+    for (int i =2; i <= 60;i++){
+        fibonacci[i] = fibonacci[i - 1] +fibonacci[i -2];
+    }
 
     for (int i = 0; i < casos; i++){
         scanf("%d", &numero);
-        int fibonacci[casos];
-        // int primeirnumero = 0;
-        // int segundonumero = 1;
-        // int proximos;
-    
-
-        // proximos = primeirnumero + segundonumero;
-        // primeirnumero = segundonumero;
-        // segundonumero = proximos;
+        printf("Fib(%d) = %llu\n", numero, fibonacci[numero]);
     }
 
     return 0;

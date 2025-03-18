@@ -1,0 +1,7 @@
+// right area
+#include <stdio.h>
+
+int main(){
+
+    return 0;
+}
